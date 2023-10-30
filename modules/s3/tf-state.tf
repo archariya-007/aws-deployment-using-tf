@@ -11,6 +11,7 @@ resource "aws_s3_bucket_versioning" "terrform-bucket-versioning" {
   bucket = aws_s3_bucket.terraform-state.id
   versioning_configuration {
     status = "Enabled"
+    mfa_delete = "Disabled"
   }
 }
 
