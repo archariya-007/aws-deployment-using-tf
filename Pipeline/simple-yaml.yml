@@ -1,0 +1,10 @@
+name: Terraform_$(Date:yyyyMMdd)_$(Rev:r)
+
+trigger: none
+
+stages:
+  - stage: build
+    jobs:
+      - job: build
+        steps:
+          - script: echo "hello world from hulk"
