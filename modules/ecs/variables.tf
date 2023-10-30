@@ -6,7 +6,7 @@ variable "project-tags" {
 
 variable "environment" {
   type        = string
-  description = "Enter the environment you're deploying to: "
+  description = "Enter the environment you're deploying to:  "
 
   validation {
     condition = (
@@ -15,13 +15,13 @@ variable "environment" {
       var.environment == "uat" ||
       var.environment == "prod"
     )
-    error_message = "Valid values are: dev, qa, uat, prod."
+    error_message = "Valid values are: dev, qa, uat, prod"
   }
 }
 
 variable "region" {
   type        = string
-  description = "Enter the region you're deploying to: "
+  description = "Enter the region you're deploying to:  "
 
   validation {
     condition     = length(var.region) > 0
