@@ -1,2 +1,2 @@
 # aws-deployment-using-tf
-Deploy AWS using Github Action
+Deploy AWS with terraform using Github Action 
