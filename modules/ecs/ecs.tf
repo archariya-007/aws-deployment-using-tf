@@ -67,7 +67,7 @@ resource "aws_ecs_task_definition" "health-communication-task" {
       "logConfiguration": {
           "logDriver": "awslogs",
           "options": {
-            "awslogs-group": "${aws_cloudwatch_log_group.health-communication_task-logs.name}",
+            "awslogs-group": "${aws_cloudwatch_log_group.health-communication-logs.name}",
             "awslogs-region": "${var.region}",
             "awslogs-stream-prefix": "ecs"
         }
