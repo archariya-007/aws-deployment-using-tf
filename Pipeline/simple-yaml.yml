@@ -1,14 +1,20 @@
-name: Octo Organization CI
-
-on:
-  push: 
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    continueOnError: true
     steps:
-      - script: echo "hello world from hulk"
+    - script: echo "hello world from hulk"
+- stage: dev_deploy
+  jobs:
+  - deployment: dev_deploy
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    environment: 'dev-hello'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - script: echo "hello, dev world ~hulk!!!"
