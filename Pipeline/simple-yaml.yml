@@ -1,9 +1,8 @@
 stages:
 - stage: Build
   jobs:
-  - job: Build
-    pool:
-      vmImage: 'Ubuntu-16.04'
-    continueOnError: true
+  build:
+    runs-on: ubuntu-latest
+    
     steps:
     - script: echo "hello world from hulk"
