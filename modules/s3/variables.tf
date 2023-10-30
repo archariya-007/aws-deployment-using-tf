@@ -13,4 +13,15 @@ variable "environment" {
   }
 }
 
+
+variable "region" {
+  type        = string
+  description = "Enter the region you're deploying to: "
+
+  validation {
+    condition     = length(var.region) > 0
+    error_message = "Valid values are not blank."
+  }
+}
+
 variable "bucket_name" {}
