@@ -1,9 +1,10 @@
-stages:
-- stage: Build
-  
-jobs:
-  build:
-    runs-on: ubuntu-latest
+name: Terraform_$(Date:yyyyMMdd)_$(Rev:r)
 
-    steps:
-    - script: echo "hello world from hulk"
+trigger: none
+
+stages:
+  - stage: build
+    jobs:
+      - job: build
+        steps:
+          - script: echo "hello world from hulk"
