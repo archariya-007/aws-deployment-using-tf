@@ -9,8 +9,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  bkstrgrg: 'storage-acct-resource-grp-name'
-  bkstrg: 'backstorage'
+  bkstrgrg: 'azDevTFTestRG01'
+  bkstrg: 'cirazadopstest01'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
 
