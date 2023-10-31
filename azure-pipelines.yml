@@ -9,8 +9,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  bkstrgrg: 'azDevTFTestRG01'
-  bkstrg: 'cirazadopstest01'
+  bkstrgrg: 'DefaultResourceGroup-CUS'
+  bkstrg: 'hulkdepopstest07'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
 
