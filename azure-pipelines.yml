@@ -16,7 +16,7 @@ variables:
 
 
 stages:
-  - stage: tf-validate
+  - stage: tfvalidate
     jobs:
       - job: validate
         continueOnError: false
