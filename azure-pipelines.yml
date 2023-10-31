@@ -26,7 +26,7 @@ stages:
             inputs:
               terraformVersion: 'latest'
 
-          - task: TerraformTaskV4@4
+          - task: TerraformTaskV3@3
             displayName: init
             inputs:
               provider: 'azurerm'
@@ -36,7 +36,7 @@ stages:
               backendAzureRmStorageAccountName: '$(bkstrg)'
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
-          - task: TerraformTaskV4@4
+          - task: TerraformTaskV3@3
             displayName: validate
             inputs:
               provider: 'azurerm'
@@ -51,7 +51,7 @@ stages:
             displayName: tfinstall
             inputs:
               terraformVersion: 'latest'
-          - task: TerraformTaskV4@4
+          - task: TerraformTaskV3@3
             displayName: init
             inputs:
               provider: 'azurerm'
@@ -62,14 +62,14 @@ stages:
               backendAzureRmContainerName: '$(bkcontainer)'
               backendAzureRmKey: '$(bkstrgkey)'
 
-          - task: TerraformTaskV4@4
+          - task: TerraformTaskV3@3
             displayName: plan
             inputs:
               provider: 'azurerm'
               command: 'plan'
               environmentServiceNameAzureRM: 'Visual Studio Professional Subscription(1)(df565cab-80bc-4641-878c-c347f3fd4f79)'
 
-          - task: TerraformTaskV4@4
+          - task: TerraformTaskV3@3
             displayName: apply
             inputs:
               provider: 'azurerm'
