@@ -9,7 +9,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  bkstrgrg: 'N/A'
+  bkstrgrg: 'APliansaneh-Mercury-X-df565cab-80bc-4641-878c-c347f3fd4f79'
   bkstrg: 'hulkdepopstest07'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
