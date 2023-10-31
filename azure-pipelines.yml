@@ -9,7 +9,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  bkstrgrg: 'DefaultResourceGroup-CUS'
+  bkstrgrg: 'N/A'
   bkstrg: 'hulkdepopstest07'
   bkcontainer: 'tfstate'
   bkstrgkey: 'devpipeline.terraform.tfstate'
